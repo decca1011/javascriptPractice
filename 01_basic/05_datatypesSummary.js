@@ -29,3 +29,6 @@ console.log(typeof floatTotal); // number
 console.log(typeof symbol); // symbol
 console.log(typeof bigInt); // bigint
  
+//=========================================================
+
+// Stack (primitive) , Heap (non -primitive)
