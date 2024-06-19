@@ -25,10 +25,11 @@ console.log(newStringOne.trim());
 
 const url  =  "https://decca.com/deepak%20patil";
 
-console.log(url.replace(`%20`,' '));
+console.log(url.replace(`%20`,' ')); // https://decca.com/deepak patil
 console.log(url.includes(`%20`)) // true
 
-console.log(url.split(`/`)) // true
+console.log(url.split(`/`)) // [ 'https:', '', 'decca.com', 'deepak%20patil' ]
+
 
 
 

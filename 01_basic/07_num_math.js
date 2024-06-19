@@ -1,13 +1,13 @@
 const score = 330;
 // console.log(score);
 
-const balance = new Number(30.333);
-// console.log(typeof balance.toString());
-// console.log(balance.toFixed(2));
+const balance = new Number(303.333);
+//console.log(typeof balance.toString());
+console.log(balance.toFixed(2));
 
-const otherNumber = 23.422322;
+const otherNumber = 234.22322;
 
-// console.log(otherNumber.toPrecision(4));
+console.log(otherNumber.toPrecision(4));
 
 const hundreds = 10000000000;
 // console.log(hundreds.toLocaleString('en-IN'));
@@ -22,12 +22,12 @@ const hundreds = 10000000000;
 // console.log(Math.max(1, 2, 3, 4, 5))
 // console.log(Math.min(1, 2, 3, 4, 5))
 
-console.log((Math.random()*10)+1);
-console.log(Math.floor(Math.random()*10)+1);
+// console.log((Math.random()*10)+1);
+// console.log(Math.floor(Math.random()*10)+1);
 
 const min = 10;
 const max = 20;
 
 const random = Math.floor(Math.random()* (max-min +1) + min)
 
-console.log(random)
+// console.log(random)
