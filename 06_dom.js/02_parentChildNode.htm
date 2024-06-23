@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body>
+    <div id="parent">
+        <p>Paragraph 1</p>
+        <span>Span 1</span>
+        Text node
+        <!-- Comment node -->
+        <p>Paragraph 2</p>
+    </div>
+
+    <script>
+        // Access the parent element
+        let parent = document.getElementById('parent');
+
+        // Get the child nodes of the parent element
+        let children = parent.childNodes;
+
+        // Log the child nodes
+        children.forEach((child, index) => {
+            console.log(`Child ${index}:`, child);
+        });
+
+        // Access specific child nodes and manipulate them
+        children.forEach(child => {
+            if (child.nodeType === Node.ELEMENT_NODE) {
+                // For element nodes
+                child.style.color = 'blue';
+            } else if (child.nodeType === Node.TEXT_NODE) {
+                // For text nodes
+                console.log('Text node content:', child.textContent.trim());
+            } else if (child.nodeType === Node.COMMENT_NODE) {
+                // For comment nodes
+                console.log('Comment node content:', child.nodeValue);
+            }
+        });
+    </script>
+</body>
+</html>

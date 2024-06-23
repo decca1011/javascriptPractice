@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dom | my practice </title>
+   <style>
+      .bg-color{
+         background-color: black;
+         color: white;
+      }
+   </style>
+</head>
+<body class="bg-color">
+ <ul class="language">
+<li>javascript</li>
+ </ul>
+</body>
+ <script>
+   function addLang (langName) {
+      const li = document.createElement('li');
+      li.innerHTML = `${langName}`;
+      document.querySelector('.language').appendChild(li);
+   }
+   addLang('python')
+   addLang('java')
+   addLang('python')
+
+   function addOptimisationLang (lang){
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(lang));
+      li.style.color = 'green';
+      document.querySelector('.language').appendChild(li);
+   }
+
+   addOptimisationLang('golang');
+   addOptimisationLang('swift');
+
+   // edit value;
+
+   const langedit = document.querySelector('li:nth-child(3)');
+   //langedit.innerHTML = 'ruby';
+
+   const newLi = document.createElement('li')
+   newLi.textContent = "mojo"
+   langedit.replaceWith(newLi)
+
+   //
+   const firstLang = document.querySelector("li:first-child");
+   firstLang.outerHTML = '<li>TypeScript</li>'
+
+
+
+   //remove 
+   const lastLang = document.querySelector('li:last-child')
+lastLang.remove()
+  </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dom | my practice </title>
+   <style>
+      .bg-color{
+         background-color: black;
+         color: white;
+      }
+   </style>
+</head>
+<body class="bg-color">
+   <div class="parent">
+      <div class="child">child 1</div>
+      
+      <div class="child">child 2</div>
+      <div class="child">child 3</div>
+   </div>
+</body>
+<script>
+    let parent = document.querySelector('.parent');
+    console.log(parent)
+    console.log(parent.children[1].innerHTML);
+
+for (let i = 0; i < parent.children.length; i++) {
+    parent.children[i].style.color = 'red';
+}
+
+parent.children[0].innerHTML ='my lemon';
+
+// console.log(parent.firstElementChild);
+// console.log(parent.lastElementChild);
+// const dayOne = document.querySelector('.child');
+// console.log(dayOne.parentElement);
+// console.log(dayOne.nextElementSibling)
+
+console.log("NODES ", parent.childNodes);
+
+</script>
+</html>
