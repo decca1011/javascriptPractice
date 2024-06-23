@@ -32,8 +32,8 @@ const languages = [
    { langName: 'MATLAB', langSymbol: 'm' }
 ];
 
-languages.forEach((item) => {
-console.log(item.langName)
-})
+// languages.forEach((item) => {
+// console.log(item.langName)
+// })
 
-
+ 

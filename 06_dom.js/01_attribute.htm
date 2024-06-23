@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body>
+    <div id="myDiv">Hello World!</div>
+    <script>
+        let div = document.getElementById('myDiv');
+        
+        // Using setAttribute to set attributes
+        div.setAttribute('class', 'greeting');
+        div.setAttribute('data-custom', 'customValue');
+        div.setAttribute('style', 'color: green; background-color: black;');
+
+
+        // Using getAttribute to get attributes
+        let classAttr = div.getAttribute('class');
+        let customAttr = div.getAttribute('data-custom');
+        let styleAttr = div.getAttribute('style');
+
+        // Output the values to the console
+        console.log('class attribute:', classAttr);          // Outputs: greeting
+        console.log('data-custom attribute:', customAttr);  // Outputs: customValue
+        console.log('style attribute:', styleAttr);         // Outputs: color: blue;
+
+        // Display the changes in the div
+        div.innerHTML += `<br>Class: ${classAttr}`;
+        div.innerHTML += `<br>Data-Custom: ${customAttr}`;
+        div.innerHTML += `<br>Style: ${styleAttr}`;
+    </script>
+</body>
+</html>

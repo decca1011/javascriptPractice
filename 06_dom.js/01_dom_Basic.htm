@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        Hello <b>World</b>! 
+        <span class="hidden">Hidden</span>
+    </div>
+
+    <script>
+        let div = document.getElementById('myDiv');
+        
+        // Using innerHTML
+        console.log('innerHTML:', div.innerHTML); 
+        // Outputs: Hello <b>World</b>! <span class="hidden">Hidden</span>
+
+        // Using innerText
+        console.log('innerText:', div.innerText); 
+        // Outputs: Hello World! (Hidden text is not included)
+
+        // Using textContent
+        console.log('textContent:', div.textContent); 
+        // Outputs: Hello World! Hidden (Hidden text is included)
+    </script>
+</body>
+</html>
