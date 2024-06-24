@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>async practice</title>
+</head>
+<body>
+   <h1>Practice code</h1>
+   <button id="start">Start</button>
+   <button id="stop">stop</button>
+</body>
+<script>
+//    const sayDate = function (str) {
+//       console.log("deepak",str, Date.now());
+//    }
+//  const intervalId = setInterval(sayDate, 4000, 'hello');
+   
+//    clearInterval(intervalId)
+
+
+   const randomColor = function (){
+      const hex = "123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+         color += hex[Math.floor(Math.random() * 16)];
+   };
+   return color
+}
+let interval
+const startChangingColor = function ()  {
+   if(!interval){
+      interval = setInterval(changeBackgroundColor,500)
+   }
+
+  function changeBackgroundColor (){ document.body.style.backgroundColor = randomColor()};
+};
+const stopChangingColor = function ()  {
+   clearInterval(interval);
+   interval = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+
+</script>
+</html>
