@@ -59,34 +59,34 @@ return user.username
 
 
 
-const promiseFive = new Promise((resolve, reject) => {
-   setTimeout(() => {
-      let error = true
-      if(!error){
+// const promiseFive = new Promise((resolve, reject) => {
+//    setTimeout(() => {
+//       let error = true
+//       if(!error){
       
-         resolve({username: 'VS', pwd: '123'})
-      }
-      else{
-         reject('ERROR: in JS something went wrong')
-      }
-   },1000)
+//          resolve({username: 'VS', pwd: '123'})
+//       }
+//       else{
+//          reject('ERROR: in JS something went wrong')
+//       }
+//    },1000)
 
-})
+// })
 
 
-async function consumePromiseFive(params) {
-   try {
-      const response =  await promiseFive
-      console.log(response)
-   }
-   catch (err) {
-      console.log(err);
-   }
+// async function consumePromiseFive(params) {
+//    try {
+//       const response =  await promiseFive
+//       console.log(response)
+//    }
+//    catch (err) {
+//       console.log(err);
+//    }
   
    
-}
+// }
 
-consumePromiseFive()
+// consumePromiseFive()
 
 
 // async function getALLUsers() {
@@ -103,12 +103,12 @@ consumePromiseFive()
 // getALLUsers()
 
 
-  fetch("https://reqres.in/api/users")
-  .then( (response )=> {
-   return response.json()
-  })
- .then( (data)=> {
-   console.log(data)
- }).catch((err) => {
-   console.log(err)
- })
+//   fetch("https://reqres.in/api/users")
+//   .then( (response )=> {
+//    return response.json()
+//   })
+//  .then( (data)=> {
+//    console.log(data)
+//  }).catch((err) => {
+//    console.log(err)
+//  })
